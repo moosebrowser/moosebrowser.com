@@ -1,0 +1,211 @@
+<!DOCTYPE html><html lang="en"> <head><!-- Google Tag Manager --><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W98KS59X');</script><!-- End Google Tag Manager --><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Configuration Reference — Moose Browser</title><meta name="description" content="Complete guide to customizing Moose Browser via settings.json."><link rel="canonical" href="https://moosebrowser.com/docs/config/"><meta property="og:title" content="Configuration Reference — Moose Browser"><meta property="og:description" content="Complete guide to customizing Moose Browser via settings.json."><meta property="og:type" content="website"><meta property="og:url" content="https://moosebrowser.com/docs/config/"><meta property="og:image" content="https://moosebrowser.com/images/og-default.png"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Configuration Reference — Moose Browser"><meta name="twitter:description" content="Complete guide to customizing Moose Browser via settings.json."><meta name="twitter:image" content="https://moosebrowser.com/images/og-default.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Space+Grotesk:wght@300;400;500;600&display=swap" rel="stylesheet"><link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"><link rel="icon" type="image/svg+xml" href="/images/favicon.svg"><link rel="shortcut icon" href="/images/favicon.ico"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"><meta name="apple-mobile-web-app-title" content="Moose"><link rel="manifest" href="/images/site.webmanifest"><link rel="stylesheet" href="/_astro/config.ClZz9ir3.css"></head> <body> <!-- Google Tag Manager (noscript) --> <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W98KS59X" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> <!-- End Google Tag Manager (noscript) -->  <a class="skip-link" href="#main">Skip to content</a> <main id="main" class="contact-page"> <section class="section contact-section"> <div class="container"> <header class="landing-header"> <div class="brand-mark"> <a class="brand-id" href="/"> <span class="brand-logo"> <img src="/images/moose-browser.svg" alt="Moose Browser logo"> </span> <span class="brand-name">Moose Browser</span> </a> <button class="landing-cta-note" id="theme-toggle" type="button">
+Light mode
+</button> </div> <nav class="landing-nav" aria-label="Primary"> <a href="/#moose">Moose</a> <a href="/#how-it-works">How it works</a> <a href="/#pricing">Pricing</a> <a href="/#faq">FAQ</a> <a class="nav-highlight" href="/purchase">Buy a license</a> </nav> <a class="secondary-btn download-cta" href="/download"> <span class="download-cta-label">Download</span> <span class="download-cta-sub" data-platform-label>Moose for MacOS</span> </a> </header> <div class="license-intro document-page"> <p class="eyebrow">Docs</p> <h1 class="landing-title">Configuration Reference</h1>  <p>Moose Browser can be customized through a JSON configuration file. To edit your settings, open the Settings menu and select “Open settings.json”. This guide covers all available options.</p>
+<h2 id="complete-example">Complete Example</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "layout"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "default"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"grid"</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "tiles"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">4</span><span style="color:#E1E4E8">,</span></span>
+<span class="line"><span style="color:#79B8FF">    "custom"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">      "three-up"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">        "tiles"</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#E1E4E8">          [</span></span>
+<span class="line"><span style="color:#E1E4E8">            { </span><span style="color:#79B8FF">"width"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">60</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"height"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">100</span><span style="color:#E1E4E8"> },</span></span>
+<span class="line"><span style="color:#E1E4E8">            { </span><span style="color:#79B8FF">"width"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">40</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"height"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">50</span><span style="color:#E1E4E8"> }</span></span>
+<span class="line"><span style="color:#E1E4E8">          ],</span></span>
+<span class="line"><span style="color:#E1E4E8">          [</span></span>
+<span class="line"><span style="color:#E1E4E8">            { </span><span style="color:#79B8FF">"width"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">40</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"height"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">50</span><span style="color:#E1E4E8"> }</span></span>
+<span class="line"><span style="color:#E1E4E8">          ]</span></span>
+<span class="line"><span style="color:#E1E4E8">        ]</span></span>
+<span class="line"><span style="color:#E1E4E8">      }</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "profiles"</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#E1E4E8">    { </span><span style="color:#79B8FF">"id"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"label"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Personal"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"color"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#43A047"</span><span style="color:#E1E4E8"> },</span></span>
+<span class="line"><span style="color:#E1E4E8">    { </span><span style="color:#79B8FF">"id"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"label"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Work"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"color"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#1E88E5"</span><span style="color:#E1E4E8"> }</span></span>
+<span class="line"><span style="color:#E1E4E8">  ],</span></span>
+<span class="line"><span style="color:#79B8FF">  "search"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "url"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"https://www.google.com/search?q=%s"</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "history"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "maxEntries"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1000</span></span>
+<span class="line"><span style="color:#E1E4E8">  },</span></span>
+<span class="line"><span style="color:#79B8FF">  "theme"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"auto"</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<hr>
+<h2 id="layout">Layout</h2>
+<p>Controls how browser tiles are arranged.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td><code>default</code></td><td>string</td><td><code>"grid"</code></td><td>Default layout: <code>"grid"</code>, <code>"split-horizontal"</code>, <code>"split-vertical"</code>, or a key from <code>custom</code></td></tr><tr><td><code>tiles</code></td><td>number</td><td><code>4</code></td><td>Default number of tiles in grid layout</td></tr><tr><td><code>custom</code></td><td>object</td><td><code>{}</code></td><td>Custom layout definitions</td></tr></tbody></table>
+<h3 id="custom-layouts">Custom Layouts</h3>
+<p>You can define custom tile arrangements. Each custom layout has a name and a <code>tiles</code> matrix where each inner array represents a row. Tiles use <code>width</code> and <code>height</code> as percentages:</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "layout"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">    "custom"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">      "three-up"</span><span style="color:#E1E4E8">: {</span></span>
+<span class="line"><span style="color:#79B8FF">        "tiles"</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#E1E4E8">          [</span></span>
+<span class="line"><span style="color:#E1E4E8">            { </span><span style="color:#79B8FF">"width"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">60</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"height"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">100</span><span style="color:#E1E4E8"> },</span></span>
+<span class="line"><span style="color:#E1E4E8">            { </span><span style="color:#79B8FF">"width"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">40</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"height"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">50</span><span style="color:#E1E4E8"> }</span></span>
+<span class="line"><span style="color:#E1E4E8">          ],</span></span>
+<span class="line"><span style="color:#E1E4E8">          [</span></span>
+<span class="line"><span style="color:#E1E4E8">            { </span><span style="color:#79B8FF">"width"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">40</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"height"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">50</span><span style="color:#E1E4E8"> }</span></span>
+<span class="line"><span style="color:#E1E4E8">          ]</span></span>
+<span class="line"><span style="color:#E1E4E8">        ]</span></span>
+<span class="line"><span style="color:#E1E4E8">      }</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">  }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<p>In this example, <code>"three-up"</code> defines two rows. The first row contains two tiles: one at 60% width/100% height and another at 40% width/50% height. The second row has one tile at 40% width/50% height, which stacks below the second tile of the first row.</p>
+<hr>
+<h2 id="profiles">Profiles</h2>
+<p>Define browsing profiles for separating contexts (e.g., work vs personal).</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#79B8FF">  "profiles"</span><span style="color:#E1E4E8">: [</span></span>
+<span class="line"><span style="color:#E1E4E8">    { </span><span style="color:#79B8FF">"id"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">1</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"label"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Personal"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"color"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#43A047"</span><span style="color:#E1E4E8"> },</span></span>
+<span class="line"><span style="color:#E1E4E8">    { </span><span style="color:#79B8FF">"id"</span><span style="color:#E1E4E8">: </span><span style="color:#79B8FF">2</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"label"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"Work"</span><span style="color:#E1E4E8">, </span><span style="color:#79B8FF">"color"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"#1E88E5"</span><span style="color:#E1E4E8"> }</span></span>
+<span class="line"><span style="color:#E1E4E8">  ]</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td><code>id</code></td><td>number</td><td>Unique identifier for the profile</td></tr><tr><td><code>label</code></td><td>string</td><td>Display name shown in the UI</td></tr><tr><td><code>color</code></td><td>string</td><td>Hex color code for visual distinction</td></tr></tbody></table>
+<p>Each profile maintains separate cookies, local storage, and browsing history.</p>
+<hr>
+<h2 id="search">Search</h2>
+<p>Configure the default search engine.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td><code>url</code></td><td>string</td><td>Google</td><td>Search URL template. Use <code>%s</code> as placeholder for the query</td></tr></tbody></table>
+<h3 id="examples">Examples</h3>
+<p><strong>Google (default):</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{ </span><span style="color:#79B8FF">"search"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"url"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"https://www.google.com/search?q=%s"</span><span style="color:#E1E4E8"> } }</span></span></code></pre>
+<p><strong>DuckDuckGo:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{ </span><span style="color:#79B8FF">"search"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"url"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"https://duckduckgo.com/?q=%s"</span><span style="color:#E1E4E8"> } }</span></span></code></pre>
+<p><strong>Bing:</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="json"><code><span class="line"><span style="color:#E1E4E8">{ </span><span style="color:#79B8FF">"search"</span><span style="color:#E1E4E8">: { </span><span style="color:#79B8FF">"url"</span><span style="color:#E1E4E8">: </span><span style="color:#9ECBFF">"https://www.bing.com/search?q=%s"</span><span style="color:#E1E4E8"> } }</span></span></code></pre>
+<hr>
+<h2 id="history">History</h2>
+<p>Configure browsing history behavior.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Property</th><th>Type</th><th>Default</th><th>Description</th></tr></thead><tbody><tr><td><code>maxEntries</code></td><td>number</td><td><code>1000</code></td><td>Maximum number of history entries to retain</td></tr></tbody></table>
+<hr>
+<h2 id="theme">Theme</h2>
+<p>Customize the visual appearance of Moose.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Value</th><th>Description</th></tr></thead><tbody><tr><td><code>"auto"</code></td><td>Follows system preference</td></tr><tr><td><code>"light"</code></td><td>Always use light theme</td></tr><tr><td><code>"dark"</code></td><td>Always use dark theme</td></tr></tbody></table>
+<hr>
+<h2 id="tips">Tips</h2>
+<ul>
+<li>Always use valid JSON syntax (double quotes for strings, no trailing commas)</li>
+<li>Back up your settings file before making significant changes</li>
+<li>Restart Moose after editing the configuration for changes to take effect</li>
+<li>Invalid JSON will cause Moose to fall back to default settings</li>
+</ul>
+<hr>
+<p><a href="/docs">Back to Documentation</a></p> </div> </div> </section> <footer class="site-footer" aria-labelledby="footer-title"> <div class="container"> <div class="footer-grid"> <div class="footer-brand"> <span class="footer-logo"> <img src="/images/moose-browser.svg" alt="Moose Browser logo"> </span> <p class="eyebrow" id="footer-title">Moose Browser © 2026</p> </div> <nav class="footer-nav" aria-label="Footer"> <a href="/">Moose Browser</a> <a href="/#how-it-works">How Moose Works</a> <a href="/#pricing">Pricing</a> <a href="/#faq">FAQ</a> <a href="/purchase">Buy a license</a> <a href="/download">Download</a> </nav> <div class="footer-links"> <a href="/docs">Documentation</a> <a href="/terms">Terms of Service</a> <a href="/privacy">Privacy Policy</a> <a href="/contact">Contact Us</a> </div> <form class="waitlist-form footer-form" action="#" method="post" data-footer-form> <label class="waitlist-label" for="footer-email">Product updates</label> <div class="waitlist-field"> <input id="footer-email" name="email" type="email" autocomplete="email" placeholder="your@email.com" required> <button class="primary-btn" type="submit">Subscribe</button> </div> <p class="waitlist-meta" data-footer-status aria-live="polite"></p> </form> </div> </div> </footer> </main> <script type="module" src="/_astro/SiteScripts.astro_astro_type_script_index_0_lang.CrZLgRRT.js"></script>  </body></html>
